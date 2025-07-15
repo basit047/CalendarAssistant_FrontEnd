@@ -1,4 +1,4 @@
-import { useState, useEffect, FormEventHandler } from "react";
+import { useState, useEffect } from "react";
 import Button from "./Button";
 
 interface FullName {
@@ -7,9 +7,9 @@ interface FullName {
 }
 
 function Practise(props: FullName) {
-  const [items, setItems] = useState(["Apple", "Banana", "Orange"]);
+  //const [items, setItems] = useState(["Apple", "Banana", "Orange"]);
   const [counter, setCounter] = useState(0);
-  const [user, setUser] = useState({ name: "Abdul", age: 29 });
+ // const [user, setUser] = useState({ name: "Abdul", age: 29 });
 
   useEffect(() => {
     alert("Value Changed");
@@ -19,12 +19,12 @@ function Practise(props: FullName) {
     setCounter((prev) => prev + data);
   };
 
-  const updateAge = () => {
-    setUser((prevUser) => ({
-      ...prevUser,
-      age: 27,
-    }));
-  };
+  // const updateAge = () => {
+  //   setUser((prevUser) => ({
+  //     ...prevUser,
+  //     age: 27,
+  //   }));
+  // };
 
   const onClickEvent = () => {
     setCounter((prevValue) => prevValue + 1);
@@ -48,16 +48,16 @@ function Practise(props: FullName) {
       <Button text="Click Me" sendCounterResponse={handleChildData} />
 
       <p>
-        User Detail {user.name} - {user.age}
+        {/* User Detail {user.name} - {user.age} */}
         <button onClick={onClickEvent}>Click Me!</button>
       </p>
 
       <ul>
-        {items.map((fruit: string, index: number) => (
+        {/* {items.map((fruit: string, index: number) => (
           <li key={index}>
             {fruit}-{index}
           </li>
-        ))}
+        ))} */}
       </ul>
       <p>
         {props.firstName ?? "Abdul Basit"} {props.lastName ?? "Raja"}

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, {useEffect } from "react";
 import { GoogleDirectLogin } from "./GoogleDirectLogin.tsx";
 import { GoogleOAuthProvider } from "@react-oauth/google";
 
@@ -53,26 +53,26 @@ const LoginStyles = () => {
 
 // --- THE MAIN LOGIN COMPONENT ---
 export const Login = () => {
-  const [formData, setFormData] = useState({
-    fullName: "",
-    email: "",
-    password: "",
-  });
+  // const [formData, setFormData] = useState({
+  //   fullName: "",
+  //   email: "",
+  //   password: "",
+  // });
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const { name, value } = e.target;
-    setFormData((prevState) => ({
-      ...prevState,
-      [name]: value,
-    }));
-  };
+  // const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  //   const { name, value } = e.target;
+  //   setFormData((prevState) => ({
+  //     ...prevState,
+  //     [name]: value,
+  //   }));
+  // };
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log("Form Submitted:", formData);
-    // Here you would typically handle the form submission,
-    // e.g., send the data to your backend API.
-    alert(`Account creation submitted for ${formData.fullName}`);
+    // console.log("Form Submitted:", formData);
+    // // Here you would typically handle the form submission,
+    // // e.g., send the data to your backend API.
+    // alert(`Account creation submitted for ${formData.fullName}`);
   };
 
   return (

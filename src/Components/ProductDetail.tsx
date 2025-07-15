@@ -32,7 +32,7 @@ function ProductDetail() {
         Back
       </Link>
       <br />
-      <Header pageHeading="Product Details" />
+      <Header />
       {!productDetail ? (
         <p>No Product Exists</p>
       ) : (

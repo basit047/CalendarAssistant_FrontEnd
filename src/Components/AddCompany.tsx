@@ -1,19 +1,15 @@
-import { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBuilding, faAddressCard } from "@fortawesome/free-solid-svg-icons";
 
 export const AddCompany = () => {
-  const [errorText, setErrorText] = useState("");
-  const [isLoading, setIsLoading] = useState(false);
   const token = localStorage.getItem("token");
-
+  
   const submitForm = (event: any) => {
     event.preventDefault();
     let companyName = event.target.name.value;
     let companyAddress = event.target.address.value;
 
     if (companyName && companyAddress) {
-      setIsLoading(true);
       fetch("http://localhost:5191/api/Company/Register", {
         method: "POST",
         headers: {
@@ -29,18 +25,15 @@ export const AddCompany = () => {
         .then((response) => response.json())
         .then((response) => {
           if (response.status === "Error") {
-            setErrorText(response.message);
-            setIsLoading(false);
           } else {
             alert(999);
           }
         })
         .catch((error) => {
-          setErrorText(error);
           console.log(`Failed to save data: ${error}`);
         });
     } else {
-      setErrorText("*** Password and confirm password does not much");
+     
     }
   };
 

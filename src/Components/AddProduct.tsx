@@ -6,7 +6,6 @@ import { FileUpload } from "./FileUpload";
 
 function AddProduct() {
   const [categories, setCategories] = useState<string[]>([]);
-  const [formSubmit, setFormSubmit] = useState(false);
 
   useEffect(() => {
     fetch("https://fakestoreapi.com/products/categories")
@@ -76,7 +75,7 @@ function AddProduct() {
         </div>
         <div className="col-auto">
           <button type="submit" className="btn btn-primary mb-3">
-            {formSubmit && (
+            {true && (
               <span
                 className="spinner-border spinner-border-sm"
                 role="status"
