@@ -138,7 +138,7 @@ export const Dashboard = () =>  {
   const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-    fetch(`https://localhost:7009/Email/GetLastSyncDate?email=${user_email}`, {
+    fetch(`https://calendarassistant-backend.onrender.com/Email/GetLastSyncDate?email=${user_email}`, {
       method: "GET",
       headers: {
         Accept: "application/json, text/plain",
@@ -177,7 +177,7 @@ export const Dashboard = () =>  {
 
   if (!didRun) {
     setLoading(true);
-    fetch("https://localhost:7009/Email/GetMailPolling", {
+    fetch("https://calendarassistant-backend.onrender.com/Email/GetMailPolling", {
       method: "GET",
       headers: {
         Accept: "application/json, text/plain",
@@ -209,7 +209,7 @@ export const Dashboard = () =>  {
 }, []);
 
 useEffect(() => {
-    fetch("https://localhost:7009/Email/GetLabels", {
+    fetch("https://calendarassistant-backend.onrender.com/Email/GetLabels", {
       method: "GET",
       headers: {
         Accept: "application/json, text/plain",
@@ -242,7 +242,7 @@ useEffect(() => {
     };
 
     try {
-      const response = await fetch("https://localhost:7009/Calendar/Schedule", {
+      const response = await fetch("https://calendarassistant-backend.onrender.com/Calendar/Schedule", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -271,7 +271,7 @@ useEffect(() => {
     };
 
     try {
-      const response = await fetch("https://localhost:7009/Email/SendMail", {
+      const response = await fetch("https://calendarassistant-backend.onrender.com/Email/SendMail", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -318,7 +318,7 @@ useEffect(() => {
     console.log(id_token);
     try {
       const response = await fetch(
-        "https://localhost:7009/Calendar/Reschedule",
+        "https://calendarassistant-backend.onrender.com/Calendar/Reschedule",
         {
           method: "POST",
           headers: {
@@ -349,10 +349,10 @@ useEffect(() => {
       });
 
       console.log(
-        `https://localhost:7009/Email/GetMailPolling?${params.toString()}`
+        `https://calendarassistant-backend.onrender.com/Email/GetMailPolling?${params.toString()}`
       );
       //const queryString = new URLSearchParams(mailFilterModel).toString();
-      const url = `https://localhost:7009/Email/GetMailPolling?${params.toString()}`;
+      const url = `https://calendarassistant-backend.onrender.com/Email/GetMailPolling?${params.toString()}`;
       const response = await fetch(url, {
         method: "GET",
         headers: {

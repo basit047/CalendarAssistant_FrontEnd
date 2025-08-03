@@ -13,7 +13,7 @@ export const GoogleDirectLogin = () => {
 
       // Send code to your .NET backend
       const response = await axios.post(
-        "https://localhost:7009/Calendar/AuthenticateUser",
+        "https://calendarassistant-backend.onrender.com/Calendar/AuthenticateUser",
         {
           token: codeResponse.code,
         },

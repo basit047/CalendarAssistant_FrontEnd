@@ -14,7 +14,7 @@ const AuthProvider = ({ children }) => {
 
   const loginAction = async (data) => {
     const callResponse = await fetch(
-      "https://localhost:7009/Authenticate/Login",
+      "https://calendarassistant-backend.onrender.com/Authenticate/Login",
       {
         method: "POST",
         headers: {

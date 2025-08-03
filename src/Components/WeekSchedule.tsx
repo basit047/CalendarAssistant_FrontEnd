@@ -19,7 +19,7 @@ export const WeeklySchedule = () => {
   const token = localStorage.getItem("token");
   // For Last Sync Date
   useEffect(() => {
-    fetch("https://localhost:7009/Schedule/GetScheduleByUserId?userId=1", {
+    fetch("https://calendarassistant-backend.onrender.com/Schedule/GetScheduleByUserId?userId=1", {
       method: "GET",
       headers: {
         Accept: "application/json, text/plain",
@@ -59,7 +59,7 @@ export const WeeklySchedule = () => {
 
     try {
       const response = await fetch(
-        "https://localhost:7009/Schedule/SaveSchedule",
+        "https://calendarassistant-backend.onrender.com/Schedule/SaveSchedule",
         {
           method: "POST",
           headers: {
