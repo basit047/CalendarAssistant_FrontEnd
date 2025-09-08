@@ -375,7 +375,7 @@ useEffect(() => {
   };
 
  const handleViewClick = (row: any) => {
-  alert("basit");
+  
     setSelectedRow(row);
     setLlmResponse(row?.nonMeetingInviteResponse?.responseSuggestedByLLM || '')
     setModalOpen(true);
@@ -581,3 +581,4 @@ const handleLabelChange = (event: any) => {
     </div>
   );
 }
+
