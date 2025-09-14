@@ -101,17 +101,10 @@ export const Login = () => {
                   </button>
                 </div>
               </form>
-              <div className="mt-8 text-xs text-gray-500 text-center">
+                <div className="mt-8 text-xs text-gray-500 text-center">
                 <span>
-                  Already have an account?{" "}
-                  <a
-                    href="#"
-                    className="font-medium text-yellow-600 hover:text-yellow-700"
-                  >
-                    Log in
-                  </a>
+                  No data is stored persistently; all operations are performed in-memory.{" "}
                 </span>
-                <span className="mx-2">|</span>
                 <span>
                   <a
                     href="#"
@@ -177,3 +170,4 @@ export const Login = () => {
     </>
   );
 };
+
